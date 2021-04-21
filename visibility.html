@@ -1,0 +1,43 @@
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+
+ </HEAD>
+ <style>
+     #showHide { width:60%; height:60%; background-color:#FFCC00; margin:10px auto; }
+ </style>
+
+<script>
+    function show(){
+        document.getElementById("showHide").style.visibility ='visible';
+    }
+    function hide(){
+        document.getElementById("showHide").style.visibility ='hidden';
+    }
+    function showHide(){
+        if(document.getElementById("showHide").style.display =='none'){
+            document.getElementById("showHide").style.display ='block';
+        }
+        else{
+            document.getElementById("showHide").style.display ='none';
+        }
+    }
+</script>
+<body>
+     <center>
+        <button onclick=show();>보이기</button>
+        <button onclick=hide();>숨기기</button>
+        <button onclick=showHide();>숨기기/보이기</button>
+    </center>
+    <div id="showHide" align="middle">
+        <center>
+            <p>바보</p>
+        </center>
+    </div>
+
+ </BODY>
+</HTML>
