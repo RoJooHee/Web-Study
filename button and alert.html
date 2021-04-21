@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    *{color:red;}
+    #myid{color:yellow;}
+    .myclass{color:black;}
+  </style>
+  <title>helllo </title>
+ </head>
+
+ <body>
+   <script>
+   function prompt_test(){  //입력 창
+     var result=prompt("답을 입력해보세요")
+     if(result=="답"){
+       alert("정답")
+     }
+     else{
+       alert_test()
+     }
+   }
+
+    function alert_test(){ //버튼 1개
+      alert("틀렸습니당")
+      prompt_test()
+    }
+
+    function confirm_test(){ //버튼 2개(선택 y/n)
+      var result=confirm("홈페이지 여실래요?");
+      if(result){
+        window.open('hello.html', '_self');
+      }
+      else{
+        alert_test();
+      }
+    }
+
+    function check_idpw(){
+      var id='주희';
+      var pw='1234';
+      if (id==(document.getElementById('주희').value)&&(pw==(document.getElementById('1234').value))){
+        alert('로그인 완료')
+        after_login()
+      }
+      else {
+        window.open('hello.html', '_self');
+      }
+    }
+
+    function after_login(){
+      var str1 = "<p>환영합니다 -";
+      var str2 = document.getElementById('주희').value
+      var str3 = "- 님</p>"
+      document.getElementById("before_login").innerHTML = str1+str2+str3;
+    }
+
+   </script>
+
+<div id=before_login>
+  User id:<br>
+  <input type="text" placeholder= '아이디 입력하세용' id="주희">
+  <br> User password:<br>
+  <input type="password" id='1234'> <!--패스워드 입력방법 -->
+  <br>
+
+  <input type="button" onclick="check_idpw()" value= 로그인>
+</div>
+
+
+<p>
+  <!-- <input type="button" onclick="window.open('basic.html', '_blank');" value="&quot; 첫번째.. &quot;"> -->
+  <input type="button" onclick="confirm_test()" value="&quot; 첫번째.. &quot;">
+</p>
+<p>
+  <input type="button" onclick="window.open('hello.html', '_blank');" value="&quot; 두번째.. &quot;">
+</p>
+
+
+  <h1 class=“myclass”> hello world </h1>
+  <h3 id=“myid” class=“myclass”> hello world </h3>
+ </body>
+</html>
